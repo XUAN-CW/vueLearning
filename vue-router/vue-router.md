@@ -25,6 +25,36 @@ npm install vue-router --save
 
 [App.vue](vue-router-demo\src\App.vue)
 
+## [Vue路由：标签应该放在哪里](https://www.cnblogs.com/bulici/p/11799404.html)             
+
+刚开始学习Vue路由时，老是不知道`<router-view/>`标签放哪里，很难受，慢慢使用很久后，才弄明白，记住一句话：将此钉子（`<router-view/>`）埋于他路径的上一级模板内即可，如：
+
+```vue
+{
+  path: "/one",
+  name: "one",
+  component: one,
+  children: [
+    {
+      path: "two",
+      component: two,
+      children:[
+        {
+          path:"three",
+          component:three
+        }
+      ]
+    }
+  ]
+}
+```
+
+上述例子中：
+
+- 第一级路由（/one）,需要将`<router-view/>`标签放在`app.vue`里
+- 第二级路由（/one/two）,需要将`<router-view/>`标签放在`one.vue`里
+- 第三级路由（/one/two/three）,需要将`<router-view/>`标签放在`two.vue`里
+
   ## router-link 属性之 exact-active-class
   - 类型: string
   - 默认值: "router-link-exact-active"
