@@ -55,7 +55,8 @@ npm install vue-router --save
 - 第二级路由（/one/two）,需要将`<router-view/>`标签放在`one.vue`里
 - 第三级路由（/one/two/three）,需要将`<router-view/>`标签放在`two.vue`里
 
-  ## router-link 属性之 exact-active-class
+## router-link 属性之 exact-active-class
+
   - 类型: string
   - 默认值: "router-link-exact-active"
   - 作用：配置当链接被精确匹配的时候应该激活的 class,简单来说就是给当前链接加个样式,在本例中体现为点击 Home、About等链接进行跳转的同时,链接变为指定样式(绿色)
