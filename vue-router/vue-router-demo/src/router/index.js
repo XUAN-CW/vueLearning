@@ -15,6 +15,11 @@ const routes = [
     path: '/about',
     name: 'About',
     component: About
+  },
+  //重定向, * 表示匹配所有，当上面的路径都不符合时,重定向到 /Home
+  {
+    path: '*',
+    redirect: '/'
   }
 ]
 
