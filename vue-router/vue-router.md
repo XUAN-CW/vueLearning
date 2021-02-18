@@ -63,3 +63,33 @@ npm install vue-router --save
   - 默认值: "router-link-exact-active"
   - 作用：配置当链接被精确匹配的时候应该激活的 class,简单来说就是给当前链接加个样式,在本例中体现为点击 Home、About等链接进行跳转的同时,链接变为指定样式(绿色)
   - 参考：[vue2.0中router-link详解](https://blog.csdn.net/lhjuejiang/article/details/81082090)
+
+# 重定向
+
+[index.js](vue-router-demo\src\router\index.js)
+
+# 二级路由
+
+## 编写组件
+
+- [AboutChildren1](vue-router-demo\src\views\About\AboutChildren1.vue)
+- [AboutChildren2](vue-router-demo\src\views\About\AboutChildren2.vue)
+- [HomeChildren1](vue-router-demo\src\views\Home\HomeChildren1.vue)
+- [HomeChildren2](vue-router-demo\src\views\Home\HomeChildren2.vue)
+
+## 编写路由
+
+就一个关键字：`children`，详细过程见 [index.js](vue-router-demo\src\router\index.js)
+
+## 使用路由
+
+- [About.vue](vue-router-demo\src\views\About.vue)
+- [Home.vue](vue-router-demo\src\views\Home.vue)
+
+## bug
+
+[路由设置高亮模式的时候默认路由一直高亮](https://blog.csdn.net/weixin_45810135/article/details/108842584)
+
+### 解决方法
+
+默认子路由添加 exact 属性：[App.vue](vue-router-demo\src\App.vue)
