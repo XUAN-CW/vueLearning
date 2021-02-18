@@ -1,27 +1,29 @@
-# 创建新项目
+# 简单入门
+
+## 创建新项目
 
 名字随意，我这里叫 **vue-router-demo** 
 
-# 安装 vue-router
+## 安装 vue-router
 
 ```
 npm install vue-router --save
 ```
 
-# 编写组件
+## 编写组件
 
 - [About.vue](vue-router-demo\src\views\About.vue)
 - [Home.vue](vue-router-demo\src\views\Home.vue)
 
-# 编写路由
+## 编写路由
 
 [index.js](vue-router-demo\src\router\index.js)
 
-# 导入 router 与添加 router 配置
+## 导入 router 与添加 router 配置
 
 ![image-20210216204754173](image/image-20210216204754173.png)
 
-# 使用路由
+## 使用路由
 
 [App.vue](vue-router-demo\src\App.vue)
 
@@ -55,7 +57,7 @@ npm install vue-router --save
 - 第二级路由（/one/two）,需要将`<router-view/>`标签放在`one.vue`里
 - 第三级路由（/one/two/three）,需要将`<router-view/>`标签放在`two.vue`里
 
-## router-link 属性之 exact-active-class
+### router-link 属性之 exact-active-class
 
   - 类型: string
   - 默认值: "router-link-exact-active"
